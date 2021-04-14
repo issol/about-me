@@ -7,7 +7,7 @@ const Root = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Home}></Route>
+        <Route exact path='/about-me' component={Home}></Route>
       </Switch>
     </BrowserRouter>
   );
