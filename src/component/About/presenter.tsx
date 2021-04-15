@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AboutPresenter = () => {
   return (
@@ -32,6 +33,23 @@ const Container = styled.div`
 
 const AboutHeader = styled.h2`
   color: #374054;
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0 0 30px 0;
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    height: 1px;
+    width: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #3498db;
+  }
 `;
 
 const Introduce = styled.p`

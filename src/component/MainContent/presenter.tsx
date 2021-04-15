@@ -22,16 +22,16 @@ const MainContentPresenter = () => {
   );
 };
 
-const Pulsate = keyframes`
-    0% {
+const pulSate = keyframes`
+    0%{
         transform: scale(1, 1);
     }
 
-    50% {
+    50%{
         transform: scale(1.2, 1.2);
     }
 
-    100% {
+    100%{
         transform: scale(1, 1);
     }
 `;
@@ -109,8 +109,11 @@ const DownForm = styled.span`
 `;
 
 const DownButton = styled.i`
-  animation: ${Pulsate} 1.5s ease;
+  animation-name: ${pulSate};
   animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-duration: 1.5s;
+
   padding-top: 5px; ;
 `;
 
