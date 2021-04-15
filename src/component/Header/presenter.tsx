@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const HeaderPresenter = () => {
   return (
@@ -8,9 +8,6 @@ const HeaderPresenter = () => {
       <MenuContainer id='menu'>
         <MenuItem>
           <MenuLink href='#about'>About</MenuLink>
-        </MenuItem>
-        <MenuItem>
-          <MenuLink href='#experience'>Experience</MenuLink>
         </MenuItem>
         <MenuItem>
           <MenuLink href='#education'>Education</MenuLink>
@@ -29,6 +26,15 @@ const HeaderPresenter = () => {
   );
 };
 
+const dropHeader = keyframes`
+  0%{
+    transform : translateY(-100%);
+  }
+  100%{
+    transform : translateY(0);
+  }
+`;
+
 const MainHeader = styled.header`
   position: absolute;
   top: 0;
@@ -36,7 +42,7 @@ const MainHeader = styled.header`
   right: 0;
   text-align: center;
   z-index: 10;
-  animation-name: dropHeader;
+  animation-name: ${dropHeader};
   animation-iteration-count: 1;
   animation-timing-function: ease;
   animation-duration: 0.75s;
@@ -77,16 +83,30 @@ const MenuLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: darken($base-color, 10%);
+    color: darken(#3498d, 10%);
     text-decoration: none;
     background: #eee;
     border-radius: 4px;
   }
 
   &:focus {
-    color: darken($base-color, 10%);
+    color: darken(#3498d, 10%);
     text-decoration: none;
   }
 `;
+
+// $base-color: #3498db;
+// $base-color-hover: darken($base-color, 10%);
+
+// // Define background colors
+// $background: #fff;
+// $background-alt: #f2f2f5;
+
+// // Define border colors
+// $border: #dcd9d9;
+
+// // Define text colors
+// $heading: #374054;
+// $text: #74808a;
 
 export default HeaderPresenter;
