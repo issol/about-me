@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const EducationPresenter = () => {
   return (
@@ -70,6 +71,12 @@ const School = styled.h3`
   float: left;
   margin: 0;
   color: #374054;
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 `;
 
 const Period = styled.span`
@@ -78,15 +85,21 @@ const Period = styled.span`
 `;
 
 const Major = styled.h4`
-  color: #374054;
+  color: #74808a;
   clear: both;
   font-weight: 500;
   margin: 0 0 15px 0;
+  font-size: 1em;
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 `;
 
 const Description = styled.p`
   margin: 0;
-  color: #37405;
+  color: #74808a;
   font-size: 0.9em;
 `;
 
