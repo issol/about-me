@@ -1,54 +1,52 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const FooterPresenter = () => {
   return (
-    <Container>
+    <Container id='contact'>
       <div className='container'>
         <div className='row'>
           <CopyRight className='col-sm-5'>
-            <p>Copyright &copy; 2021 Issol</p>
+            <CopyRightOwner>Copyright &copy; 2021 Issol</CopyRightOwner>
           </CopyRight>
-          <div className='col-sm-2 top'>
-            <span id='to-top'>
-              <i className='fa fa-chevron-up' aria-hidden='true'></i>
-            </span>
-          </div>
-          <div className='col-sm-5 social'>
-            <ul>
-              <li>
-                <a href='https://github.com/issol' target='_blank'>
-                  <i className='fa fa-github' aria-hidden='true'></i>
-                </a>
-              </li>
-              <li>
-                <a href='https://stackoverflow.com/' target='_blank'>
-                  <i className='fa fa-stack-overflow' aria-hidden='true'></i>
-                </a>
-              </li>
-              <li>
-                <a href='https://linkedin.com/' target='_blank'>
-                  <i className='fa fa-linkedin' aria-hidden='true'></i>
-                </a>
-              </li>
-              <li>
-                <a href='https://www.facebook.com/' target='_blank'>
-                  <i className='fa fa-facebook' aria-hidden='true'></i>
-                </a>
-              </li>
-              <li>
-                <a href='https://twitter.com/' target='_blank'>
-                  <i className='fa fa-twitter' aria-hidden='true'></i>
-                </a>
-              </li>
-              <li>
-                <a href='https://plus.google.com/' target='_blank'>
-                  <i className='fa fa-google-plus' aria-hidden='true'></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <GoTopContainer className='col-sm-2'>
+            <GoTopWrapper id='to-top'>
+              <GoTopButton className='fa fa-chevron-up' aria-hidden='true'></GoTopButton>
+            </GoTopWrapper>
+          </GoTopContainer>
+          <SocialIcon className='col-sm-5'>
+            <SocialList>
+              <Social>
+                <SocialLink href='https://github.com/issol' target='_blank'>
+                  <i className='fab fa-github' aria-hidden='true'></i>
+                </SocialLink>
+              </Social>
+
+              <Social>
+                <SocialLink href='https://velog.io/@issol' target='_blank'>
+                  <i className='fas fa-blog' aria-hidden='true'></i>
+                </SocialLink>
+              </Social>
+
+              <Social>
+                <SocialLink href='https://www.notion.so/77a36d3afafc4698a2f0fe9a08515510' target='_blank'>
+                  <i className='fas fa-clipboard' aria-hidden='true'></i>
+                </SocialLink>
+              </Social>
+
+              <Social>
+                <SocialLink>
+                  <CopyToClipboard text={'isolatorv@gmail.com'}>
+                    <CopyEmail className='fas fa-at' aria-hidden='true'></CopyEmail>
+                  </CopyToClipboard>
+                </SocialLink>
+              </Social>
+            </SocialList>
+          </SocialIcon>
         </div>
       </div>
     </Container>
@@ -65,8 +63,68 @@ const CopyRight = styled.div`
 
 const CopyRightOwner = styled.p`
   margin: 0;
-  color: $text;
+  color: #74808a;
 `;
+
+const GoTopContainer = styled.div`
+  text-align: center;
+`;
+
+const GoTopWrapper = styled.span`
+  cursor: pointer;
+  display: block;
+  margin: 15px auto 0 auto;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 3px solid lighten(#74808a, 25%);
+  text-align: center;
+`;
+
+const GoTopButton = styled.i`
+  color: #74808a;
+`;
+
+const SocialIcon = styled.div`
+  text-align: right;
+`;
+
+const SocialList = styled.ul`
+  margin: 5px 0 0 0;
+  padding: 0;
+`;
+
+const Social = styled.li`
+  display: inline-block;
+  font-size: 1.25em;
+  list-style: none;
+`;
+
+const SocialLink = styled.a`
+  display: block;
+  color: #74808a;
+  padding: 10px;
+
+  &:hover {
+    color: #3498db;
+  }
+`;
+
+const CopyEmail = styled.i`
+  cursor: pointer;
+`;
+
+// const CopyEmailButton = styled.button`
+//   background-image: url(${PaperPlaneImage});
+//   background-color: white;
+//   color: #74808a;
+//   width: 40px;
+//   height: 30px;
+//   margin: 0 auto;
+//   &:hover {
+//     color: #3498db;
+//   }
+// `;
 
 // $base-color: #3498db;
 // $base-color-hover: darken($base-color, 10%);

@@ -11,14 +11,11 @@ const AboutPresenter = () => {
             <AboutHeader>About Me</AboutHeader>
           </div>
           <div className='col-md-8'>
-            <Introduce>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi
-              ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam
-              laoreet placerat. Donec eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et
-              tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra.
-              Vivamus nunc justo, finibus ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue
-              eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
-            </Introduce>
+            <AboutMe>
+              <Introduce>😀 Why?를 항상 생각하는 개발자 </Introduce>
+              <Introduce>😃 사용자 입장에서 생각하는 개발자</Introduce>
+              <Introduce>🤔 개인보단 팀과의 협업의 중요성을 아는 개발자</Introduce>
+            </AboutMe>
           </div>
         </div>
       </div>
@@ -52,9 +49,14 @@ const AboutHeader = styled.h2`
   }
 `;
 
-const Introduce = styled.p`
+const AboutMe = styled.ul`
+  margin: 0;
+`;
+
+const Introduce = styled.li`
   color: #74808a;
   margin: 0;
+  font-size: 1.2em;
 `;
 
 // $base-color: #3498db;
