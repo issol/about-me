@@ -18,6 +18,9 @@ const HeaderPresenter = () => {
         <MenuItem>
           <MenuLink href='#skills'>Skills</MenuLink>
         </MenuItem>
+        <MenuItem>
+          <MenuLink href='#contact'>Contact</MenuLink>
+        </MenuItem>
       </MenuContainer>
     </MainHeader>
   );

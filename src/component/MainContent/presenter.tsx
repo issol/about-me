@@ -6,9 +6,8 @@ const MainContentPresenter = () => {
   return (
     <MainContainer id='lead'>
       <MainContent id='lead-content'>
-        <NameForm>Ryan Fitzgerald</NameForm>
-        <PositionForm>Software Engineer</PositionForm>
-        <a href='#'>Download Resume</a>
+        <NameForm>김민규</NameForm>
+        <PositionForm>FrontEnd Developer</PositionForm>
       </MainContent>
 
       <MainOverlay id='lead-overlay'></MainOverlay>
@@ -42,6 +41,7 @@ const MainContainer = styled.div`
   min-height: 500px;
   max-height: 1080px;
   background-image: url(${mainImage});
+
   background-size: cover;
   padding: 15px;
   overflow: hidden;
@@ -56,7 +56,7 @@ const MainContent = styled.div`
   text-align: center;
 `;
 
-const NameForm = styled.div`
+const NameForm = styled.h1`
   margin: 0;
   color: #fff;
   font-weight: 900;
@@ -66,9 +66,9 @@ const NameForm = styled.div`
   line-height: 0.9em;
 `;
 
-const PositionForm = styled.div`
+const PositionForm = styled.h2`
   margin: 0;
-  color: lighten(#3498db, 25%);
+  color: #3498db;
   font-weight: 500;
   font-size: 2.25em;
   margin-bottom: 15px;

@@ -4,11 +4,10 @@ import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import PaperPlaneImage from 'assets/images/paper-plane-regular.svg';
 
 const FooterPresenter = () => {
   return (
-    <Container>
+    <Container id='contact'>
       <div className='container'>
         <div className='row'>
           <CopyRight className='col-sm-5'>
@@ -34,9 +33,15 @@ const FooterPresenter = () => {
               </Social>
 
               <Social>
+                <SocialLink href='https://www.notion.so/77a36d3afafc4698a2f0fe9a08515510' target='_blank'>
+                  <i className='fas fa-clipboard' aria-hidden='true'></i>
+                </SocialLink>
+              </Social>
+
+              <Social>
                 <SocialLink>
                   <CopyToClipboard text={'isolatorv@gmail.com'}>
-                    <i className='fas fa-paper-plane' aria-hidden='true'></i>
+                    <CopyEmail className='fas fa-at' aria-hidden='true'></CopyEmail>
                   </CopyToClipboard>
                 </SocialLink>
               </Social>
@@ -103,6 +108,10 @@ const SocialLink = styled.a`
   &:hover {
     color: #3498db;
   }
+`;
+
+const CopyEmail = styled.i`
+  cursor: pointer;
 `;
 
 // const CopyEmailButton = styled.button`

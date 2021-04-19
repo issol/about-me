@@ -10,13 +10,16 @@ const ProjectPresenter = () => {
         <div className='row'>
           <Section>
             <ProjectInfo>
-              <ProjectName>Project Name Here</ProjectName>
+              <ProjectName>Mind Note</ProjectName>
               <ProjectDescription>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna.
-                Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta
-                quam laoreet placerat.
+                서로 연관 없는 아이디어들을 연관시키는 과정에서 얻은 이유들로 글쓰기를 도와주는 서비스
               </ProjectDescription>
-              <a href='#'>View Project</a>
+              <View href='https://mindnote.kr' target='_blank'>
+                View Project
+              </View>
+              <View href='https://www.notion.so/MindNote-d010f2741ed749debd2a8c12c0d7a1cc' target='_blank'>
+                View Description
+              </View>
             </ProjectInfo>
           </Section>
         </div>
@@ -80,6 +83,10 @@ const ProjectDescription = styled.p`
   color: #74808a;
   margin: 0 0 15px 0;
   font-size: 0.9em;
+`;
+
+const View = styled.a`
+  margin: 20px;
 `;
 
 export default ProjectPresenter;

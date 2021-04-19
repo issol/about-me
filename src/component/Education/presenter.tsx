@@ -7,25 +7,17 @@ const EducationPresenter = () => {
     <Container id='education'>
       <Subject>Education</Subject>
       <Section>
-        <School>University of Ottawa</School>
-        <Period>Sept 2016 - Sept 2017</Period>
-        <Major>Bachelor of Science in Computer Science</Major>
-        <Description>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut
-          tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet
-          placerat.
-        </Description>
+        <School>국가평생교육진흥원 학점은행제</School>
+        <Period>2016.03 - 2020.08</Period>
+        <Major>컴퓨터공학</Major>
+        <Description>컴퓨터공학 학사학위 취득</Description>
       </Section>
 
       <Section>
-        <School>University of Ottawa</School>
-        <Period>Sept 2016 - Sept 2017</Period>
-        <Major>Bachelor of Science in Computer Science</Major>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        </ul>
+        <School>선린인터넷고등학교</School>
+        <Period>2011.03 - 2014.02</Period>
+        <Major>정보통신과</Major>
+        <Description>선린인터넷고등학교 정보통신과 일반전형 입학</Description>
       </Section>
     </Container>
   );
@@ -104,17 +96,3 @@ const Description = styled.p`
 `;
 
 export default EducationPresenter;
-
-// $base-color: #3498db;
-// $base-color-hover: darken($base-color, 10%);
-
-// // Define background colors
-// $background: #fff;
-// $background-alt: #f2f2f5;
-
-// // Define border colors
-// $border: #dcd9d9;
-
-// // Define text colors
-// $heading: #374054;
-// $text: #74808a;
