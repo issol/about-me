@@ -5,7 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-const FooterPresenter = () => {
+type Props = {
+  CopiedEmail: () => Promise<void>;
+};
+
+const FooterPresenter = ({ CopiedEmail }: Props) => {
   return (
     <Container id='contact'>
       <div className='container'>
@@ -40,7 +44,7 @@ const FooterPresenter = () => {
 
               <Social>
                 <SocialLink>
-                  <CopyToClipboard text={'isolatorv@gmail.com'}>
+                  <CopyToClipboard text={'isolatorv@gmail.com'} onCopy={CopiedEmail}>
                     <CopyEmail className='fas fa-at' aria-hidden='true'></CopyEmail>
                   </CopyToClipboard>
                 </SocialLink>
