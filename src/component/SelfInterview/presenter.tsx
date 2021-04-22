@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { SelfInterViewType } from './container';
 
 type Props = {
   dropAnswerRef: React.MutableRefObject<null>;
   isActive: boolean;
   setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
-  questions: string[];
-  answers: string[];
+  selfInterview: SelfInterViewType;
+  handleListDropDown: (idx: number) => void;
 };
 
 export type DropDownRef = {
   isActive: boolean;
 };
 
-const SelfInterviewPresenter = ({ dropAnswerRef, isActive, setIsActive, questions, answers }: Props) => {
+const SelfInterviewPresenter = ({ dropAnswerRef, isActive, setIsActive, selfInterview, handleListDropDown }: Props) => {
   return (
     <Container id='self-interview'>
       <div className='container'>
@@ -23,13 +24,26 @@ const SelfInterviewPresenter = ({ dropAnswerRef, isActive, setIsActive, question
             <SelfInterviewHeader>Self Interview</SelfInterviewHeader>
           </div>
           <div className='col-md-8'>
-            {questions.map((question) => {
+            {selfInterview.questions.map((ques, index) => {
+              console.log(ques.isActive);
+
               return (
-                <InterviewContainer ref={dropAnswerRef} isActive={isActive}>
+                <InterviewContainer ref={dropAnswerRef} isActive={isActive} key={index}>
                   <InterViewQuestion>
-                    <i className='fas fa-sort-down'></i>
-                    {question}
+                    <DropDownButton className='fas fa-sort-down' onClick={() => handleListDropDown(index)}></DropDownButton>
+                    {ques.question}
                   </InterViewQuestion>
+                  {ques.isActive &&
+                    selfInterview.answers.map((answer, aIndex) => {
+                      if (index === aIndex) {
+                        return (
+                          <Answer isActive={ques.isActive} key={aIndex}>
+                            {answer.answer}
+                          </Answer>
+                        );
+                      }
+                      return <></>;
+                    })}
                 </InterviewContainer>
               );
             })}
