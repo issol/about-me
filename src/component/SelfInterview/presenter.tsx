@@ -25,10 +25,8 @@ const SelfInterviewPresenter = ({ dropAnswerRef, isActive, setIsActive, selfInte
           </div>
           <div className='col-md-8'>
             {selfInterview.questions.map((ques, index) => {
-              console.log(ques.isActive);
-
               return (
-                <InterviewContainer ref={dropAnswerRef} isActive={isActive} key={index}>
+                <InterviewContainer ref={dropAnswerRef} isActive={isActive} key={ques.id}>
                   <InterViewQuestion>
                     <DropDownButton className='fas fa-sort-down' onClick={() => handleListDropDown(index)}></DropDownButton>
                     {ques.question}
@@ -37,7 +35,7 @@ const SelfInterviewPresenter = ({ dropAnswerRef, isActive, setIsActive, selfInte
                     selfInterview.answers.map((answer, aIndex) => {
                       if (index === aIndex) {
                         return (
-                          <Answer isActive={ques.isActive} key={aIndex}>
+                          <Answer isActive={ques.isActive} key={answer.id}>
                             {answer.answer}
                           </Answer>
                         );

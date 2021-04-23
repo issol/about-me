@@ -19,7 +19,9 @@ const FooterPresenter = ({ CopiedEmail }: Props) => {
           </CopyRight>
           <GoTopContainer className='col-sm-2'>
             <GoTopWrapper id='to-top'>
-              <GoTopButton className='fa fa-chevron-up' aria-hidden='true'></GoTopButton>
+              <a href='#lead'>
+                <GoTopButton className='fa fa-chevron-up' aria-hidden='true'></GoTopButton>
+              </a>
             </GoTopWrapper>
           </GoTopContainer>
           <SocialIcon className='col-sm-5'>
