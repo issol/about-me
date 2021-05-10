@@ -98,6 +98,8 @@ const DropDownButton = styled.i`
 `;
 
 const Answer = styled.div<DropDownRef>`
+  margin: 10px 0 10px 21px;
+
   opacity: ${(props) => (props.isActive ? '1;' : '0;')};
   transform: ${(props) => (props.isActive ? 'translateY(0);' : 'translateY(-20px);')};
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
