@@ -92,7 +92,7 @@ export default function Home() {
                   <span>Adam</span> Milner
                 </h3>
                 <p className='quote'>
-                  I'm a passionate front-end web developer who excels at creating pixel-perfect web interfaces. I’m available for a freelance job.{' '}
+                  I&apos;m a passionate front-end web developer who excels at creating pixel-perfect web interfaces. I&apos;m available for a freelance job.{' '}
                   <a href='#contact' className='anchor'>
                     Hire me
                   </a>
@@ -169,7 +169,7 @@ export default function Home() {
                   </div>
                   <div className='right_hero_header'>
                     <div className='my_self'>
-                      <h4>Hello! I'm a</h4>
+                      <h4>Hello! I&apos;m a</h4>
                       <h2>
                         <span className='cd-headline clip'>
                           <span className='cd-words-wrapper'>
@@ -189,8 +189,8 @@ export default function Home() {
                   <h3>Biography</h3>
                 </div>
                 <p>
-                  I'm a Freelancer Front-end Developer with over 12 years of experience. I'm from San Francisco. I code and create web elements for amazing people around the world. I like work with
-                  new people. New people are new experiences.
+                  I&apos;m a Freelancer Front-end Developer with over 12 years of experience. I&apos;m from San Francisco. I code and create web elements for amazing people around the world. I like
+                  work with new people. New people are new experiences.
                 </p>
                 <div className='fn_cs_info_items'>
                   <ul>
